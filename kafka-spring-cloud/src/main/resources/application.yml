@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    stream:
+      bindings:
+        pageEventConsumer-in-0:
+          destination: T1
+    function:
+      definition: pageEventConsumer
