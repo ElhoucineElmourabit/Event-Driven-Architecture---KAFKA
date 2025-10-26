@@ -11,5 +11,10 @@ spring:
           producer:
             poller:
               fixed-delay: 200
+        kStreamKStreamFunction-in-0:
+          destination: T2
+        kStreamKStreamFunction-out-0:
+          destination: T3
+
     function:
-      definition: pageEventConsumer; pageEventSupplier
+      definition: pageEventConsumer; pageEventSupplier; kStreamKStreamFunction
