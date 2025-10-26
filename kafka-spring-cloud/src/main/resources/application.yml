@@ -6,5 +6,10 @@ spring:
       bindings:
         pageEventConsumer-in-0:
           destination: T1
+        pageEventSupplier-out-0:
+          destination: T2
+          producer:
+            poller:
+              fixed-delay: 200
     function:
-      definition: pageEventConsumer
+      definition: pageEventConsumer; pageEventSupplier
